@@ -1,4 +1,5 @@
-FROM python:2
+# FROM python:2
+FROM continuumio/miniconda
 
 WORKDIR /snorkel
 SHELL ["/bin/bash", "-c"]

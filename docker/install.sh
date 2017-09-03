@@ -3,8 +3,10 @@ set -ex
 
 function install_python_pkgs {
   # Packages required by Snorkel
-  # apt-get update
-  # apt-get install -y g++ # for compiling SpaCy
+  conda install -y numba
+  apt-get update
+  apt-get install -y g++ # for compiling SpaCy
+  pip install -U pip
   pip install --no-cache-dir -r python-package-requirement.txt
   jupyter nbextension enable --py widgetsnbextension --sys-prefix
   pip install --no-cache-dir runipy
